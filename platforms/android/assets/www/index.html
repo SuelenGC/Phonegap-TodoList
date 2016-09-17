@@ -10,14 +10,30 @@
         <title>Todo List</title>
     </head>
     <body>
-        <h1>Todo List</h1>
+        <nav>
+            <div class="nav-wrapper brand-color">
+                <a href="#" class="brand-logo">Todo List</a>
+            </div>
+        </nav>
 
         <div id="newTaskSession">
-            <input type="text" id="newTaskInput" placeholder="New Task">
-            <button class="waves-effect waves-light btn" id="addNewTask">Add</button>
+            <!-- <input type="text" id="newTaskInput" placeholder="New Task"> -->
+
+            <div class="input-field col s6">
+                <input id="newTaskInput" type="text" length="30">
+                <label for="newTaskInput">New Task</label>
+            </div>
+            
+            <!-- <button class="waves-effect waves-light btn" id="addNewTask">Add</button> -->
         </div>
 
         <ul id="taskList"></ul>
+
+        <div class="fixed-action-btn" style="bottom: 24px; right: 24px;">
+            <a class="btn-floating btn-large blue" id="addNewTask">
+                <i class="large material-icons">+</i>
+            </a>
+        </div>
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>

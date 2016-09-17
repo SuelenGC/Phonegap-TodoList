@@ -10,11 +10,17 @@
         <title>Todo List</title>
     </head>
     <body>
-        <h1>Todo List</h1>
+        <nav>
+            <div class="nav-wrapper brand-color">
+                <a href="#" class="brand-logo">Todo List</a>
+            </div>
+        </nav>
 
         <div id="newTaskSession">
-            <input type="text" id="newTaskInput" placeholder="New Task">
-            <!-- <button class="waves-effect waves-light btn" id="addNewTask">Add</button> -->
+            <div class="input-field col s6">
+                <input id="newTaskInput" type="text" length="30">
+                <label for="newTaskInput">New Task</label>
+            </div>
         </div>
 
         <ul id="taskList"></ul>

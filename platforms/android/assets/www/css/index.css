@@ -4,33 +4,14 @@ body {
     background-color: #d4d0B4;
 }
 
-h1 {
+.brand-color {
     background-color: #626b5e;
-    font-size: 1em;
     color: #f5f6f5;
-    line-height: 2em;
 }
 
-#newTaskInput {
-    display: block;
+#newTaskSession {
+    margin-bottom: 30px;
     width: 98%;
-    background-color: #757769;
-    border: 0;
-    height: 2em;
-    font-size: 1em;
-    color: #f5f6f5;
-    margin-top: 10px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-#addNewTask {
-    display: block;
-    width: 98%;
-    border: 0;
-    height: 2em;
-    font-size: 1em;
-    color: #f5f6f5;
     margin-top: 10px;
     margin-right: auto;
     margin-left: auto;

@@ -2,6 +2,8 @@ var taskList = new Array();
 
 $( document ).ready(function(){
 
+    $(".button-collapse").sideNav();
+    
     var $newTaskInput = $('#newTaskInput');
     var $taskList = $('#taskList');
 
@@ -27,7 +29,7 @@ $( document ).ready(function(){
 
     $('#addNewTask').on('click', function() {
         var key = Date.now();
-        $newTaskInput.val('Teste ' + Date.now());
+        // $newTaskInput.val('Teste ' + Date.now());
         var newTask = '<li data-key="' + key + '"><span>' + $newTaskInput.val() + '</span></li>';
         $taskList.append(newTask);
 
