@@ -72,3 +72,8 @@ $( document ).ready(function(){
 	    }
     });
 });
+
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    navigator.notification.alert('teste', null, 'Game Over', 'Done')
+}
