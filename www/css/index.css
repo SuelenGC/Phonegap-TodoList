@@ -11,7 +11,7 @@ h1 {
     line-height: 2em;
 }
 
-#newTaskInput, #addNewTask {
+#newTaskInput {
     display: block;
     width: 98%;
     background-color: #757769;

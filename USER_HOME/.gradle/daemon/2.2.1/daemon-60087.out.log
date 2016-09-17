@@ -1034,3 +1034,513 @@ Total time: 3.571 secs
 04:49:29.222 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 106: received null
 04:49:29.222 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] Received end-of-input from client.
 04:49:29.223 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 86: stopping connection
+05:59:55.977 [DEBUG] [org.gradle.messaging.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:52202 to /127.0.0.1:55913.
+05:59:56.010 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 110: received class org.gradle.launcher.daemon.protocol.Build
+05:59:56.010 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] Received non-IO message from client: Build{id=a729c59e-4e16-4ae0-9f29-1fc5e7ed0e23.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}
+05:59:56.011 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: Build{id=a729c59e-4e16-4ae0-9f29-1fc5e7ed0e23.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}.
+05:59:56.011 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: Build{id=a729c59e-4e16-4ae0-9f29-1fc5e7ed0e23.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap} with connection: socket connection from /127.0.0.1:55913 to /127.0.0.1:52202.
+05:59:56.013 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=a729c59e-4e16-4ae0-9f29-1fc5e7ed0e23.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}, connection = org.gradle.launcher.daemon.server.DefaultDaemonConnection@3df06a37] after 70.0 minutes of idle
+05:59:56.013 [INFO] [org.gradle.launcher.daemon.server.DomainRegistryUpdater] Marking the daemon as busy, address: [5d54b1ea-6525-401e-b422-3ef5de75c6fd port:55913, addresses:[/0:0:0:0:0:0:0:1, /127.0.0.1]]
+05:59:56.013 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [5d54b1ea-6525-401e-b422-3ef5de75c6fd port:55913, addresses:[/0:0:0:0:0:0:0:1, /127.0.0.1]]
+05:59:56.016 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+05:59:56.017 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+05:59:56.026 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+05:59:56.027 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] updating lastActivityAt to 1474102796027
+05:59:56.028 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=a729c59e-4e16-4ae0-9f29-1fc5e7ed0e23.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}. Dispatching build started information...
+05:59:56.028 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon is busy, sleeping until state changes.
+05:59:56.028 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 112: dispatching class org.gradle.launcher.daemon.protocol.BuildStarted
+05:59:56.030 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: {PATH=/Users/SuelenGC/.rvm/gems/ruby-2.2.2/bin:/Users/SuelenGC/.rvm/gems/ruby-2.2.2@global/bin:/Users/SuelenGC/.rvm/rubies/ruby-2.2.2/bin:/Users/SuelenGC/Library/Android/sdk/platform-tools/:/Users/SuelenGC/works/bin:/usr/local/share/npm/bin/:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/texbin:/Library/apache-ant-1.9.4/bin:/Users/SuelenGC/Documents/devtools/apache-maven-3.2.1/bin:GCC49/bin:/usr/local/go/bin:/Users/SuelenGC/.rvm/bin:/usr/local/var/postgres:/Users/SuelenGC/Library/Android/sdk/tools, IRBRC=/Users/SuelenGC/.rvm/rubies/ruby-2.2.2/.irbrc, GREP_OPTIONS=--color=auto, ANDROID_HOME=/Users/SuelenGC/Library/Android/sdk, APP_NAME_60944=Gradle, LOGNAME=SuelenGC, rvm_version=1.26.11 (latest), PWD=/Users/SuelenGC/HelloWorldPhoneGap, TERM_PROGRAM_VERSION=343.7, SHELL=/usr/local/zsh, MY_RUBY_HOME=/Users/SuelenGC/.rvm/rubies/ruby-2.2.2, GOPATH=/Users/SuelenGC/works, GCC49=/usr/local/Cellar/gcc/4.9.2_1, OLDPWD=/Users/SuelenGC/HelloWorldPhoneGap/platforms/android, GEM_HOME=/Users/SuelenGC/.rvm/gems/ruby-2.2.2, PGDATA=/usr/local/var/postgres, rvm_path=/Users/SuelenGC/.rvm, TMPDIR=/var/folders/96/bw2v139104d8714hmd_dys8c0000gn/T/, RUBY_VERSION=ruby-2.2.2, XPC_FLAGS=0x0, TERM_SESSION_ID=724BD9CE-1E81-40C4-A8AA-E29AEB0E539B, _system_name=OSX, M2_HOME=/Users/SuelenGC/Documents/devtools/apache-maven-3.2.1, __CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0, Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.B85P8roz0i/Render, SHLVL=1, USER_HOME=/Users/SuelenGC/, _system_arch=x86_64, rvm_bin_path=/Users/SuelenGC/.rvm/bin, GREP_COLOR=4;33, JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_11.jdk/Contents/Home, TERM=xterm-256color, rvm_prefix=/Users/SuelenGC, LANG=en_US.UTF-8, ANT_HOME=/Library/Ant-1.9.3, GRADLE_USER_HOME=USER_HOME/.gradle, XPC_SERVICE_NAME=0, TERM_PROGRAM=Apple_Terminal, LSCOLORS=GxFxCxDxBxegedabagacad, _system_type=Darwin, JAVA_MAIN_CLASS_60944=org.gradle.wrapper.GradleWrapperMain, _system_version=10.10, USER=SuelenGC, CLICOLOR=1, SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.aAZ8K0do3a/Listeners, EDITOR=vim, GEM_PATH=/Users/SuelenGC/.rvm/gems/ruby-2.2.2:/Users/SuelenGC/.rvm/gems/ruby-2.2.2@global, APP_ICON_60944=/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/media/gradle.icns, HOME=/Users/SuelenGC}
+05:59:56.032 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+05:59:56.032 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 60087). The daemon log file: /Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/daemon/2.2.1/daemon-60087.out.log
+05:59:56.033 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+05:59:56.034 [INFO] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=d1aa5b19-6de5-4d80-afcb-325e60e8ec25,javaHome=/Library/Java/JavaVirtualMachines/jdk1.8.0_11.jdk/Contents/Home,daemonRegistryDir=/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/daemon,pid=60087,idleTimeout=10800000,daemonOpts=-XX:MaxPermSize=256m,-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]
+05:59:56.053 [DEBUG] [org.gradle.internal.resource.transport.http.JavaSystemPropertiesHttpProxySettings] Found java system property 'http.nonProxyHosts': local|*.local|169.254/16|*.169.254/16. Will ignore proxy settings for these hosts.
+:preBuild UP-TO-DATE
+:preDebugBuild UP-TO-DATE
+:checkDebugManifest
+:CordovaLib:preBuild UP-TO-DATE
+:CordovaLib:preDebugBuild UP-TO-DATE
+:CordovaLib:compileDebugNdk UP-TO-DATE
+:CordovaLib:compileLint
+:CordovaLib:copyDebugLint UP-TO-DATE
+:CordovaLib:mergeDebugProguardFiles UP-TO-DATE
+:CordovaLib:packageDebugRenderscript UP-TO-DATE
+:CordovaLib:checkDebugManifest
+:CordovaLib:prepareDebugDependencies
+:CordovaLib:compileDebugRenderscript UP-TO-DATE
+:CordovaLib:generateDebugResValues UP-TO-DATE
+:CordovaLib:generateDebugResources UP-TO-DATE
+:CordovaLib:packageDebugResources UP-TO-DATE
+:CordovaLib:compileDebugAidl UP-TO-DATE
+:CordovaLib:generateDebugBuildConfig UP-TO-DATE
+:CordovaLib:generateDebugAssets UP-TO-DATE
+:CordovaLib:mergeDebugAssets UP-TO-DATE
+:CordovaLib:processDebugManifest UP-TO-DATE
+:CordovaLib:processDebugResources UP-TO-DATE
+:CordovaLib:generateDebugSources UP-TO-DATE
+:CordovaLib:compileDebugJavaWithJavac UP-TO-DATE
+:CordovaLib:processDebugJavaRes UP-TO-DATE
+:CordovaLib:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:CordovaLib:transformClassesAndResourcesWithSyncLibJarsForDebug UP-TO-DATE
+:CordovaLib:mergeDebugJniLibFolders UP-TO-DATE
+:CordovaLib:transformNative_libsWithMergeJniLibsForDebug UP-TO-DATE
+:CordovaLib:transformNative_libsWithSyncJniLibsForDebug UP-TO-DATE
+:CordovaLib:bundleDebug UP-TO-DATE
+:prepareAndroidCordovaLibUnspecifiedDebugLibrary UP-TO-DATE
+:prepareDebugDependencies
+:compileDebugAidl UP-TO-DATE
+:compileDebugRenderscript UP-TO-DATE
+:generateDebugBuildConfig UP-TO-DATE
+:generateDebugAssets UP-TO-DATE
+:mergeDebugAssets
+:generateDebugResValues UP-TO-DATE
+:generateDebugResources UP-TO-DATE
+:mergeDebugResources UP-TO-DATE
+:processDebugManifest UP-TO-DATE
+:processDebugResources
+:generateDebugSources
+:compileDebugJavaWithJavac UP-TO-DATE
+:compileDebugNdk UP-TO-DATE
+:compileDebugSources UP-TO-DATE
+:transformClassesWithDexForDebug UP-TO-DATE
+:mergeDebugJniLibFolders UP-TO-DATE
+:transformNative_libsWithMergeJniLibsForDebug UP-TO-DATE
+:processDebugJavaRes UP-TO-DATE
+:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:validateDebugSigning
+:packageDebug
+:zipalignDebug
+:assembleDebug
+:cdvBuildDebug
+
+BUILD SUCCESSFUL
+
+Total time: 5.975 secs
+06:00:01.151 [DEBUG] [org.gradle.api.internal.tasks.compile.daemon.CompilerDaemonManager] Stopping 0 compiler daemon(s).
+06:00:01.152 [INFO] [org.gradle.api.internal.tasks.compile.daemon.CompilerDaemonManager] Stopped 0 compiler daemon(s).
+06:00:01.153 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache module-metadata.bin (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/modules-2/metadata-2.14/module-metadata.bin)
+06:00:01.154 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache artifact-at-repository.bin (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/modules-2/metadata-2.14/artifact-at-repository.bin)
+06:00:01.155 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on artifact cache (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/modules-2).
+06:00:01.162 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for settings file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/settings.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/settings_p3twwe4zw2nx1duybzr6lsjs/SettingsScript/buildscript).
+06:00:01.177 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for settings file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/settings.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/settings_p3twwe4zw2nx1duybzr6lsjs/SettingsScript/no_buildscript).
+06:00:01.191 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for build file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/build.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/build_d2gg9vqtu1wkl8apjd2nvm8zr/ProjectScript/buildscript).
+06:00:01.192 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for build file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/build.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/build_d2gg9vqtu1wkl8apjd2nvm8zr/ProjectScript/no_buildscript).
+06:00:01.192 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for script '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/CordovaLib/cordova.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/cordova_1ibchojqtalcl5stsaxw02s1i/DefaultScript/buildscript).
+06:00:01.193 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for script '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/CordovaLib/cordova.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/cordova_1ibchojqtalcl5stsaxw02s1i/DefaultScript/no_buildscript).
+06:00:01.196 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for build file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/CordovaLib/build.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/build_bo72d2940or76vyh5za4zsnp/ProjectScript/buildscript).
+06:00:01.197 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for build file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/CordovaLib/build.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/build_bo72d2940or76vyh5za4zsnp/ProjectScript/no_buildscript).
+06:00:01.198 [DEBUG] [org.gradle.cache.internal.DefaultCacheAccess] Cache Plugin Resolution Cache (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/plugin-resolution) was closed 0 times.
+06:00:01.201 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache outputFileStates.bin (/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/.gradle/2.2.1/taskArtifacts/outputFileStates.bin)
+06:00:01.213 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache fileSnapshots.bin (/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin)
+06:00:01.216 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache taskArtifacts.bin (/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin)
+06:00:01.217 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache fileHashes.bin (/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/.gradle/2.2.1/taskArtifacts/fileHashes.bin)
+06:00:01.218 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on task history cache (/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/.gradle/2.2.1/taskArtifacts).
+06:00:01.219 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.memcache.InMemoryCachedRepositoryFactory] In-memory dependency metadata cache closed. Repos cached: 14, cache instances: 3, modules served from cache: 53, artifacts: 53
+06:00:01.221 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.CachedStoreFactory] Resolution result cache closed. Cache reads: 0, disk reads: 4 (avg: 0.0 secs, total: 0.002 secs)
+06:00:01.223 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.CachedStoreFactory] Resolved configuration cache closed. Cache reads: 0, disk reads: 0 (avg: 0.0 secs, total: 0.0 secs)
+06:00:01.223 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.ResolutionResultsStoreFactory] Deleted 2 resolution results binary files in 0.004 secs
+06:00:01.224 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has finished executing the build.
+06:00:02.057 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: finished waiting for DaemonCommandExecution[command = Build{id=a729c59e-4e16-4ae0-9f29-1fc5e7ed0e23.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}, connection = org.gradle.launcher.daemon.server.DefaultDaemonConnection@3df06a37]. Result org.gradle.launcher.daemon.server.DaemonStateCoordinator@398f0093 with state Running
+06:00:02.061 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: completed DaemonCommandExecution[command = Build{id=a729c59e-4e16-4ae0-9f29-1fc5e7ed0e23.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}, connection = org.gradle.launcher.daemon.server.DefaultDaemonConnection@3df06a37]
+06:00:02.061 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] updating lastActivityAt to 1474102802061
+06:00:02.062 [INFO] [org.gradle.launcher.daemon.server.DomainRegistryUpdater] Marking the daemon as idle, address: [5d54b1ea-6525-401e-b422-3ef5de75c6fd port:55913, addresses:[/0:0:0:0:0:0:0:1, /127.0.0.1]]
+06:00:02.062 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking idle by address: [5d54b1ea-6525-401e-b422-3ef5de75c6fd port:55913, addresses:[/0:0:0:0:0:0:0:1, /127.0.0.1]]
+06:00:02.062 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+06:00:02.063 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+06:00:02.088 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+06:00:02.090 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon is idle, sleeping until state change or idle timeout at Sat Sep 17 09:00:02 BRT 2016
+06:00:02.090 [DEBUG] [org.gradle.launcher.daemon.server.exec.ReturnResult] Daemon is dispatching the build result: DaemonCommandResult[type=Success, value=null]
+06:00:02.090 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 109: dispatching class org.gradle.launcher.daemon.protocol.Success
+06:00:02.094 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Finishing executing command: Build{id=a729c59e-4e16-4ae0-9f29-1fc5e7ed0e23.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}
+06:00:02.104 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 110: received class org.gradle.launcher.daemon.protocol.CloseInput
+06:00:02.104 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] Received IO message from client: CloseInput[id=a729c59e-4e16-4ae0-9f29-1fc5e7ed0e23.2]
+06:00:02.105 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 110: received class org.gradle.launcher.daemon.protocol.Finished
+06:00:02.105 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] Received non-IO message from client: org.gradle.launcher.daemon.protocol.Finished@36c4957b
+06:00:02.106 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 110: received null
+06:00:02.106 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] Received end-of-input from client.
+06:00:02.107 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received finished message: null
+06:00:02.107 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 109: stopping connection
+06:00:02.107 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 109: stopping connection
+06:01:33.420 [DEBUG] [org.gradle.messaging.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:53714 to /127.0.0.1:55913.
+06:01:33.465 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 130: received class org.gradle.launcher.daemon.protocol.Build
+06:01:33.465 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] Received non-IO message from client: Build{id=130304fe-86f5-42fa-8da8-3e500e708341.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}
+06:01:33.465 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: Build{id=130304fe-86f5-42fa-8da8-3e500e708341.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}.
+06:01:33.466 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: Build{id=130304fe-86f5-42fa-8da8-3e500e708341.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap} with connection: socket connection from /127.0.0.1:55913 to /127.0.0.1:53714.
+06:01:33.466 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=130304fe-86f5-42fa-8da8-3e500e708341.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}, connection = org.gradle.launcher.daemon.server.DefaultDaemonConnection@5e2c1658] after 1.0 minutes of idle
+06:01:33.466 [INFO] [org.gradle.launcher.daemon.server.DomainRegistryUpdater] Marking the daemon as busy, address: [5d54b1ea-6525-401e-b422-3ef5de75c6fd port:55913, addresses:[/0:0:0:0:0:0:0:1, /127.0.0.1]]
+06:01:33.467 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [5d54b1ea-6525-401e-b422-3ef5de75c6fd port:55913, addresses:[/0:0:0:0:0:0:0:1, /127.0.0.1]]
+06:01:33.467 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+06:01:33.467 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+06:01:33.469 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+06:01:33.470 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] updating lastActivityAt to 1474102893470
+06:01:33.470 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon is busy, sleeping until state changes.
+06:01:33.470 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=130304fe-86f5-42fa-8da8-3e500e708341.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}. Dispatching build started information...
+06:01:33.471 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 132: dispatching class org.gradle.launcher.daemon.protocol.BuildStarted
+06:01:33.473 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: {PATH=/Users/SuelenGC/.rvm/gems/ruby-2.2.2/bin:/Users/SuelenGC/.rvm/gems/ruby-2.2.2@global/bin:/Users/SuelenGC/.rvm/rubies/ruby-2.2.2/bin:/Users/SuelenGC/Library/Android/sdk/platform-tools/:/Users/SuelenGC/works/bin:/usr/local/share/npm/bin/:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/texbin:/Library/apache-ant-1.9.4/bin:/Users/SuelenGC/Documents/devtools/apache-maven-3.2.1/bin:GCC49/bin:/usr/local/go/bin:/Users/SuelenGC/.rvm/bin:/usr/local/var/postgres:/Users/SuelenGC/Library/Android/sdk/tools, IRBRC=/Users/SuelenGC/.rvm/rubies/ruby-2.2.2/.irbrc, GREP_OPTIONS=--color=auto, ANDROID_HOME=/Users/SuelenGC/Library/Android/sdk, LOGNAME=SuelenGC, rvm_version=1.26.11 (latest), PWD=/Users/SuelenGC/HelloWorldPhoneGap, TERM_PROGRAM_VERSION=343.7, SHELL=/usr/local/zsh, MY_RUBY_HOME=/Users/SuelenGC/.rvm/rubies/ruby-2.2.2, GOPATH=/Users/SuelenGC/works, GCC49=/usr/local/Cellar/gcc/4.9.2_1, OLDPWD=/Users/SuelenGC/HelloWorldPhoneGap/platforms/android, GEM_HOME=/Users/SuelenGC/.rvm/gems/ruby-2.2.2, PGDATA=/usr/local/var/postgres, rvm_path=/Users/SuelenGC/.rvm, TMPDIR=/var/folders/96/bw2v139104d8714hmd_dys8c0000gn/T/, RUBY_VERSION=ruby-2.2.2, XPC_FLAGS=0x0, TERM_SESSION_ID=724BD9CE-1E81-40C4-A8AA-E29AEB0E539B, _system_name=OSX, M2_HOME=/Users/SuelenGC/Documents/devtools/apache-maven-3.2.1, JAVA_MAIN_CLASS_61060=org.gradle.wrapper.GradleWrapperMain, __CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0, Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.B85P8roz0i/Render, SHLVL=1, APP_NAME_61060=Gradle, USER_HOME=/Users/SuelenGC/, _system_arch=x86_64, rvm_bin_path=/Users/SuelenGC/.rvm/bin, GREP_COLOR=4;33, JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_11.jdk/Contents/Home, APP_ICON_61060=/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/media/gradle.icns, TERM=xterm-256color, rvm_prefix=/Users/SuelenGC, LANG=en_US.UTF-8, ANT_HOME=/Library/Ant-1.9.3, GRADLE_USER_HOME=USER_HOME/.gradle, XPC_SERVICE_NAME=0, TERM_PROGRAM=Apple_Terminal, LSCOLORS=GxFxCxDxBxegedabagacad, _system_type=Darwin, _system_version=10.10, USER=SuelenGC, CLICOLOR=1, SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.aAZ8K0do3a/Listeners, EDITOR=vim, GEM_PATH=/Users/SuelenGC/.rvm/gems/ruby-2.2.2:/Users/SuelenGC/.rvm/gems/ruby-2.2.2@global, HOME=/Users/SuelenGC}
+06:01:33.474 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+06:01:33.474 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 60087). The daemon log file: /Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/daemon/2.2.1/daemon-60087.out.log
+06:01:33.475 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+06:01:33.475 [INFO] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=d1aa5b19-6de5-4d80-afcb-325e60e8ec25,javaHome=/Library/Java/JavaVirtualMachines/jdk1.8.0_11.jdk/Contents/Home,daemonRegistryDir=/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/daemon,pid=60087,idleTimeout=10800000,daemonOpts=-XX:MaxPermSize=256m,-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]
+06:01:33.484 [DEBUG] [org.gradle.internal.resource.transport.http.JavaSystemPropertiesHttpProxySettings] Found java system property 'http.nonProxyHosts': local|*.local|169.254/16|*.169.254/16. Will ignore proxy settings for these hosts.
+:preBuild UP-TO-DATE
+:preDebugBuild UP-TO-DATE
+:checkDebugManifest
+:CordovaLib:preBuild UP-TO-DATE
+:CordovaLib:preDebugBuild UP-TO-DATE
+:CordovaLib:compileDebugNdk UP-TO-DATE
+:CordovaLib:compileLint
+:CordovaLib:copyDebugLint UP-TO-DATE
+:CordovaLib:mergeDebugProguardFiles UP-TO-DATE
+:CordovaLib:packageDebugRenderscript UP-TO-DATE
+:CordovaLib:checkDebugManifest
+:CordovaLib:prepareDebugDependencies
+:CordovaLib:compileDebugRenderscript UP-TO-DATE
+:CordovaLib:generateDebugResValues UP-TO-DATE
+:CordovaLib:generateDebugResources UP-TO-DATE
+:CordovaLib:packageDebugResources UP-TO-DATE
+:CordovaLib:compileDebugAidl UP-TO-DATE
+:CordovaLib:generateDebugBuildConfig UP-TO-DATE
+:CordovaLib:generateDebugAssets UP-TO-DATE
+:CordovaLib:mergeDebugAssets UP-TO-DATE
+:CordovaLib:processDebugManifest UP-TO-DATE
+:CordovaLib:processDebugResources UP-TO-DATE
+:CordovaLib:generateDebugSources UP-TO-DATE
+:CordovaLib:compileDebugJavaWithJavac UP-TO-DATE
+:CordovaLib:processDebugJavaRes UP-TO-DATE
+:CordovaLib:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:CordovaLib:transformClassesAndResourcesWithSyncLibJarsForDebug UP-TO-DATE
+:CordovaLib:mergeDebugJniLibFolders UP-TO-DATE
+:CordovaLib:transformNative_libsWithMergeJniLibsForDebug UP-TO-DATE
+:CordovaLib:transformNative_libsWithSyncJniLibsForDebug UP-TO-DATE
+:CordovaLib:bundleDebug UP-TO-DATE
+:prepareAndroidCordovaLibUnspecifiedDebugLibrary UP-TO-DATE
+:prepareDebugDependencies
+:compileDebugAidl UP-TO-DATE
+:compileDebugRenderscript UP-TO-DATE
+:generateDebugBuildConfig UP-TO-DATE
+:generateDebugAssets UP-TO-DATE
+:mergeDebugAssets
+:generateDebugResValues UP-TO-DATE
+:generateDebugResources UP-TO-DATE
+:mergeDebugResources UP-TO-DATE
+:processDebugManifest UP-TO-DATE
+:processDebugResources
+:generateDebugSources
+:compileDebugJavaWithJavac UP-TO-DATE
+:compileDebugNdk UP-TO-DATE
+:compileDebugSources UP-TO-DATE
+:transformClassesWithDexForDebug UP-TO-DATE
+:mergeDebugJniLibFolders UP-TO-DATE
+:transformNative_libsWithMergeJniLibsForDebug UP-TO-DATE
+:processDebugJavaRes UP-TO-DATE
+:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:validateDebugSigning
+:packageDebug
+:zipalignDebug
+:assembleDebug
+:cdvBuildDebug
+
+BUILD SUCCESSFUL
+
+Total time: 4.072 secs
+06:01:36.749 [DEBUG] [org.gradle.api.internal.tasks.compile.daemon.CompilerDaemonManager] Stopping 0 compiler daemon(s).
+06:01:36.749 [INFO] [org.gradle.api.internal.tasks.compile.daemon.CompilerDaemonManager] Stopped 0 compiler daemon(s).
+06:01:36.750 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for settings file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/settings.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/settings_p3twwe4zw2nx1duybzr6lsjs/SettingsScript/buildscript).
+06:01:36.750 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for settings file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/settings.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/settings_p3twwe4zw2nx1duybzr6lsjs/SettingsScript/no_buildscript).
+06:01:36.752 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for build file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/build.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/build_d2gg9vqtu1wkl8apjd2nvm8zr/ProjectScript/buildscript).
+06:01:36.752 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for build file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/build.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/build_d2gg9vqtu1wkl8apjd2nvm8zr/ProjectScript/no_buildscript).
+06:01:36.752 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for script '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/CordovaLib/cordova.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/cordova_1ibchojqtalcl5stsaxw02s1i/DefaultScript/buildscript).
+06:01:36.753 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for script '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/CordovaLib/cordova.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/cordova_1ibchojqtalcl5stsaxw02s1i/DefaultScript/no_buildscript).
+06:01:36.753 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for build file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/CordovaLib/build.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/build_bo72d2940or76vyh5za4zsnp/ProjectScript/buildscript).
+06:01:36.754 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for build file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/CordovaLib/build.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/build_bo72d2940or76vyh5za4zsnp/ProjectScript/no_buildscript).
+06:01:36.754 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache artifact-at-repository.bin (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/modules-2/metadata-2.14/artifact-at-repository.bin)
+06:01:36.754 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache module-metadata.bin (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/modules-2/metadata-2.14/module-metadata.bin)
+06:01:36.755 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on artifact cache (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/modules-2).
+06:01:36.755 [DEBUG] [org.gradle.cache.internal.DefaultCacheAccess] Cache Plugin Resolution Cache (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/plugin-resolution) was closed 0 times.
+06:01:36.755 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache fileHashes.bin (/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/.gradle/2.2.1/taskArtifacts/fileHashes.bin)
+06:01:36.756 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache fileSnapshots.bin (/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin)
+06:01:36.756 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache taskArtifacts.bin (/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin)
+06:01:36.756 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache outputFileStates.bin (/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/.gradle/2.2.1/taskArtifacts/outputFileStates.bin)
+06:01:36.756 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on task history cache (/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/.gradle/2.2.1/taskArtifacts).
+06:01:36.757 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.memcache.InMemoryCachedRepositoryFactory] In-memory dependency metadata cache closed. Repos cached: 14, cache instances: 3, modules served from cache: 53, artifacts: 53
+06:01:36.757 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.CachedStoreFactory] Resolution result cache closed. Cache reads: 0, disk reads: 4 (avg: 0.0 secs, total: 0.0 secs)
+06:01:36.758 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.CachedStoreFactory] Resolved configuration cache closed. Cache reads: 0, disk reads: 0 (avg: 0.0 secs, total: 0.0 secs)
+06:01:36.758 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.ResolutionResultsStoreFactory] Deleted 2 resolution results binary files in 0.001 secs
+06:01:36.758 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has finished executing the build.
+06:01:36.759 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon is busy, sleeping until state changes.
+06:01:36.759 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: finished waiting for DaemonCommandExecution[command = Build{id=130304fe-86f5-42fa-8da8-3e500e708341.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}, connection = org.gradle.launcher.daemon.server.DefaultDaemonConnection@5e2c1658]. Result org.gradle.launcher.daemon.server.DaemonStateCoordinator@398f0093 with state Running
+06:01:36.760 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: completed DaemonCommandExecution[command = Build{id=130304fe-86f5-42fa-8da8-3e500e708341.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}, connection = org.gradle.launcher.daemon.server.DefaultDaemonConnection@5e2c1658]
+06:01:36.760 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] updating lastActivityAt to 1474102896760
+06:01:36.760 [INFO] [org.gradle.launcher.daemon.server.DomainRegistryUpdater] Marking the daemon as idle, address: [5d54b1ea-6525-401e-b422-3ef5de75c6fd port:55913, addresses:[/0:0:0:0:0:0:0:1, /127.0.0.1]]
+06:01:36.760 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking idle by address: [5d54b1ea-6525-401e-b422-3ef5de75c6fd port:55913, addresses:[/0:0:0:0:0:0:0:1, /127.0.0.1]]
+06:01:36.760 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+06:01:36.761 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+06:01:36.762 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+06:01:36.763 [DEBUG] [org.gradle.launcher.daemon.server.exec.ReturnResult] Daemon is dispatching the build result: DaemonCommandResult[type=Success, value=null]
+06:01:36.763 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon is idle, sleeping until state change or idle timeout at Sat Sep 17 09:01:36 BRT 2016
+06:01:36.763 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 129: dispatching class org.gradle.launcher.daemon.protocol.Success
+06:01:36.764 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Finishing executing command: Build{id=130304fe-86f5-42fa-8da8-3e500e708341.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}
+06:01:36.770 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 130: received class org.gradle.launcher.daemon.protocol.CloseInput
+06:01:36.770 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] Received IO message from client: CloseInput[id=130304fe-86f5-42fa-8da8-3e500e708341.2]
+06:01:36.772 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 130: received class org.gradle.launcher.daemon.protocol.Finished
+06:01:36.772 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] Received non-IO message from client: org.gradle.launcher.daemon.protocol.Finished@4d53c520
+06:01:36.773 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received finished message: org.gradle.launcher.daemon.protocol.Finished@4d53c520
+06:01:36.773 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 129: stopping connection
+06:01:36.773 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 130: received null
+06:01:36.773 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] Received end-of-input from client.
+06:01:36.774 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 129: stopping connection
+06:02:08.192 [DEBUG] [org.gradle.messaging.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:54271 to /127.0.0.1:55913.
+06:02:08.220 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 146: received class org.gradle.launcher.daemon.protocol.Build
+06:02:08.220 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] Received non-IO message from client: Build{id=e043b8c6-858f-4551-bc56-419ba18d47db.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}
+06:02:08.220 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: Build{id=e043b8c6-858f-4551-bc56-419ba18d47db.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}.
+06:02:08.221 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: Build{id=e043b8c6-858f-4551-bc56-419ba18d47db.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap} with connection: socket connection from /127.0.0.1:55913 to /127.0.0.1:54271.
+06:02:08.221 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=e043b8c6-858f-4551-bc56-419ba18d47db.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}, connection = org.gradle.launcher.daemon.server.DefaultDaemonConnection@1827f4cd] after 0.0 minutes of idle
+06:02:08.222 [INFO] [org.gradle.launcher.daemon.server.DomainRegistryUpdater] Marking the daemon as busy, address: [5d54b1ea-6525-401e-b422-3ef5de75c6fd port:55913, addresses:[/0:0:0:0:0:0:0:1, /127.0.0.1]]
+06:02:08.222 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [5d54b1ea-6525-401e-b422-3ef5de75c6fd port:55913, addresses:[/0:0:0:0:0:0:0:1, /127.0.0.1]]
+06:02:08.222 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+06:02:08.223 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+06:02:08.224 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+06:02:08.224 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] updating lastActivityAt to 1474102928224
+06:02:08.224 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon is busy, sleeping until state changes.
+06:02:08.225 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=e043b8c6-858f-4551-bc56-419ba18d47db.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}. Dispatching build started information...
+06:02:08.225 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 132: dispatching class org.gradle.launcher.daemon.protocol.BuildStarted
+06:02:08.231 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: {PATH=/Users/SuelenGC/.rvm/gems/ruby-2.2.2/bin:/Users/SuelenGC/.rvm/gems/ruby-2.2.2@global/bin:/Users/SuelenGC/.rvm/rubies/ruby-2.2.2/bin:/Users/SuelenGC/Library/Android/sdk/platform-tools/:/Users/SuelenGC/works/bin:/usr/local/share/npm/bin/:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/texbin:/Library/apache-ant-1.9.4/bin:/Users/SuelenGC/Documents/devtools/apache-maven-3.2.1/bin:GCC49/bin:/usr/local/go/bin:/Users/SuelenGC/.rvm/bin:/usr/local/var/postgres:/Users/SuelenGC/Library/Android/sdk/tools, IRBRC=/Users/SuelenGC/.rvm/rubies/ruby-2.2.2/.irbrc, GREP_OPTIONS=--color=auto, ANDROID_HOME=/Users/SuelenGC/Library/Android/sdk, LOGNAME=SuelenGC, rvm_version=1.26.11 (latest), PWD=/Users/SuelenGC/HelloWorldPhoneGap, TERM_PROGRAM_VERSION=343.7, SHELL=/usr/local/zsh, MY_RUBY_HOME=/Users/SuelenGC/.rvm/rubies/ruby-2.2.2, GOPATH=/Users/SuelenGC/works, GCC49=/usr/local/Cellar/gcc/4.9.2_1, OLDPWD=/Users/SuelenGC/HelloWorldPhoneGap/platforms/android, GEM_HOME=/Users/SuelenGC/.rvm/gems/ruby-2.2.2, PGDATA=/usr/local/var/postgres, JAVA_MAIN_CLASS_61136=org.gradle.wrapper.GradleWrapperMain, rvm_path=/Users/SuelenGC/.rvm, TMPDIR=/var/folders/96/bw2v139104d8714hmd_dys8c0000gn/T/, RUBY_VERSION=ruby-2.2.2, XPC_FLAGS=0x0, TERM_SESSION_ID=724BD9CE-1E81-40C4-A8AA-E29AEB0E539B, _system_name=OSX, M2_HOME=/Users/SuelenGC/Documents/devtools/apache-maven-3.2.1, __CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0, Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.B85P8roz0i/Render, APP_ICON_61136=/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/media/gradle.icns, SHLVL=1, USER_HOME=/Users/SuelenGC/, _system_arch=x86_64, rvm_bin_path=/Users/SuelenGC/.rvm/bin, GREP_COLOR=4;33, JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_11.jdk/Contents/Home, TERM=xterm-256color, rvm_prefix=/Users/SuelenGC, LANG=en_US.UTF-8, ANT_HOME=/Library/Ant-1.9.3, GRADLE_USER_HOME=USER_HOME/.gradle, APP_NAME_61136=Gradle, XPC_SERVICE_NAME=0, TERM_PROGRAM=Apple_Terminal, LSCOLORS=GxFxCxDxBxegedabagacad, _system_type=Darwin, _system_version=10.10, USER=SuelenGC, CLICOLOR=1, SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.aAZ8K0do3a/Listeners, EDITOR=vim, GEM_PATH=/Users/SuelenGC/.rvm/gems/ruby-2.2.2:/Users/SuelenGC/.rvm/gems/ruby-2.2.2@global, HOME=/Users/SuelenGC}
+06:02:08.231 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+06:02:08.232 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 60087). The daemon log file: /Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/daemon/2.2.1/daemon-60087.out.log
+06:02:08.232 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+06:02:08.232 [INFO] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=d1aa5b19-6de5-4d80-afcb-325e60e8ec25,javaHome=/Library/Java/JavaVirtualMachines/jdk1.8.0_11.jdk/Contents/Home,daemonRegistryDir=/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/daemon,pid=60087,idleTimeout=10800000,daemonOpts=-XX:MaxPermSize=256m,-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]
+06:02:08.240 [DEBUG] [org.gradle.internal.resource.transport.http.JavaSystemPropertiesHttpProxySettings] Found java system property 'http.nonProxyHosts': local|*.local|169.254/16|*.169.254/16. Will ignore proxy settings for these hosts.
+:preBuild UP-TO-DATE
+:preDebugBuild UP-TO-DATE
+:checkDebugManifest
+:CordovaLib:preBuild UP-TO-DATE
+:CordovaLib:preDebugBuild UP-TO-DATE
+:CordovaLib:compileDebugNdk UP-TO-DATE
+:CordovaLib:compileLint
+:CordovaLib:copyDebugLint UP-TO-DATE
+:CordovaLib:mergeDebugProguardFiles UP-TO-DATE
+:CordovaLib:packageDebugRenderscript UP-TO-DATE
+:CordovaLib:checkDebugManifest
+:CordovaLib:prepareDebugDependencies
+:CordovaLib:compileDebugRenderscript UP-TO-DATE
+:CordovaLib:generateDebugResValues UP-TO-DATE
+:CordovaLib:generateDebugResources UP-TO-DATE
+:CordovaLib:packageDebugResources UP-TO-DATE
+:CordovaLib:compileDebugAidl UP-TO-DATE
+:CordovaLib:generateDebugBuildConfig UP-TO-DATE
+:CordovaLib:generateDebugAssets UP-TO-DATE
+:CordovaLib:mergeDebugAssets UP-TO-DATE
+:CordovaLib:processDebugManifest UP-TO-DATE
+:CordovaLib:processDebugResources UP-TO-DATE
+:CordovaLib:generateDebugSources UP-TO-DATE
+:CordovaLib:compileDebugJavaWithJavac UP-TO-DATE
+:CordovaLib:processDebugJavaRes UP-TO-DATE
+:CordovaLib:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:CordovaLib:transformClassesAndResourcesWithSyncLibJarsForDebug UP-TO-DATE
+:CordovaLib:mergeDebugJniLibFolders UP-TO-DATE
+:CordovaLib:transformNative_libsWithMergeJniLibsForDebug UP-TO-DATE
+:CordovaLib:transformNative_libsWithSyncJniLibsForDebug UP-TO-DATE
+:CordovaLib:bundleDebug UP-TO-DATE
+:prepareAndroidCordovaLibUnspecifiedDebugLibrary UP-TO-DATE
+:prepareDebugDependencies
+:compileDebugAidl UP-TO-DATE
+:compileDebugRenderscript UP-TO-DATE
+:generateDebugBuildConfig UP-TO-DATE
+:generateDebugAssets UP-TO-DATE
+:mergeDebugAssets
+:generateDebugResValues UP-TO-DATE
+:generateDebugResources UP-TO-DATE
+:mergeDebugResources UP-TO-DATE
+:processDebugManifest UP-TO-DATE
+:processDebugResources
+:generateDebugSources
+:compileDebugJavaWithJavac UP-TO-DATE
+:compileDebugNdk UP-TO-DATE
+:compileDebugSources UP-TO-DATE
+:transformClassesWithDexForDebug UP-TO-DATE
+:mergeDebugJniLibFolders UP-TO-DATE
+:transformNative_libsWithMergeJniLibsForDebug UP-TO-DATE
+:processDebugJavaRes UP-TO-DATE
+:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:validateDebugSigning
+:packageDebug
+:zipalignDebug
+:assembleDebug
+:cdvBuildDebug
+
+BUILD SUCCESSFUL
+
+Total time: 3.429 secs
+06:02:10.855 [DEBUG] [org.gradle.api.internal.tasks.compile.daemon.CompilerDaemonManager] Stopping 0 compiler daemon(s).
+06:02:10.858 [INFO] [org.gradle.api.internal.tasks.compile.daemon.CompilerDaemonManager] Stopped 0 compiler daemon(s).
+06:02:10.858 [DEBUG] [org.gradle.cache.internal.DefaultCacheAccess] Cache Plugin Resolution Cache (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/plugin-resolution) was closed 0 times.
+06:02:10.859 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache artifact-at-repository.bin (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/modules-2/metadata-2.14/artifact-at-repository.bin)
+06:02:10.859 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache module-metadata.bin (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/modules-2/metadata-2.14/module-metadata.bin)
+06:02:10.859 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on artifact cache (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/modules-2).
+06:02:10.860 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for settings file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/settings.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/settings_p3twwe4zw2nx1duybzr6lsjs/SettingsScript/buildscript).
+06:02:10.860 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for settings file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/settings.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/settings_p3twwe4zw2nx1duybzr6lsjs/SettingsScript/no_buildscript).
+06:02:10.860 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for build file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/build.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/build_d2gg9vqtu1wkl8apjd2nvm8zr/ProjectScript/buildscript).
+06:02:10.861 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for build file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/build.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/build_d2gg9vqtu1wkl8apjd2nvm8zr/ProjectScript/no_buildscript).
+06:02:10.861 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for script '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/CordovaLib/cordova.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/cordova_1ibchojqtalcl5stsaxw02s1i/DefaultScript/buildscript).
+06:02:10.861 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for script '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/CordovaLib/cordova.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/cordova_1ibchojqtalcl5stsaxw02s1i/DefaultScript/no_buildscript).
+06:02:10.861 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for build file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/CordovaLib/build.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/build_bo72d2940or76vyh5za4zsnp/ProjectScript/buildscript).
+06:02:10.861 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for build file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/CordovaLib/build.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/build_bo72d2940or76vyh5za4zsnp/ProjectScript/no_buildscript).
+06:02:10.862 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache outputFileStates.bin (/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/.gradle/2.2.1/taskArtifacts/outputFileStates.bin)
+06:02:10.862 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache fileHashes.bin (/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/.gradle/2.2.1/taskArtifacts/fileHashes.bin)
+06:02:10.862 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache taskArtifacts.bin (/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin)
+06:02:10.863 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache fileSnapshots.bin (/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin)
+06:02:10.863 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on task history cache (/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/.gradle/2.2.1/taskArtifacts).
+06:02:10.864 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.memcache.InMemoryCachedRepositoryFactory] In-memory dependency metadata cache closed. Repos cached: 14, cache instances: 3, modules served from cache: 53, artifacts: 53
+06:02:10.864 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.CachedStoreFactory] Resolution result cache closed. Cache reads: 0, disk reads: 4 (avg: 0.0 secs, total: 0.0 secs)
+06:02:10.865 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.CachedStoreFactory] Resolved configuration cache closed. Cache reads: 0, disk reads: 0 (avg: 0.0 secs, total: 0.0 secs)
+06:02:10.865 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.ResolutionResultsStoreFactory] Deleted 2 resolution results binary files in 0.001 secs
+06:02:10.865 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has finished executing the build.
+06:02:11.312 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: finished waiting for DaemonCommandExecution[command = Build{id=e043b8c6-858f-4551-bc56-419ba18d47db.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}, connection = org.gradle.launcher.daemon.server.DefaultDaemonConnection@1827f4cd]. Result org.gradle.launcher.daemon.server.DaemonStateCoordinator@398f0093 with state Running
+06:02:11.313 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: completed DaemonCommandExecution[command = Build{id=e043b8c6-858f-4551-bc56-419ba18d47db.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}, connection = org.gradle.launcher.daemon.server.DefaultDaemonConnection@1827f4cd]
+06:02:11.313 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] updating lastActivityAt to 1474102931313
+06:02:11.313 [INFO] [org.gradle.launcher.daemon.server.DomainRegistryUpdater] Marking the daemon as idle, address: [5d54b1ea-6525-401e-b422-3ef5de75c6fd port:55913, addresses:[/0:0:0:0:0:0:0:1, /127.0.0.1]]
+06:02:11.313 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking idle by address: [5d54b1ea-6525-401e-b422-3ef5de75c6fd port:55913, addresses:[/0:0:0:0:0:0:0:1, /127.0.0.1]]
+06:02:11.313 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+06:02:11.314 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+06:02:11.315 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+06:02:11.315 [DEBUG] [org.gradle.launcher.daemon.server.exec.ReturnResult] Daemon is dispatching the build result: DaemonCommandResult[type=Success, value=null]
+06:02:11.315 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 129: dispatching class org.gradle.launcher.daemon.protocol.Success
+06:02:11.315 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon is idle, sleeping until state change or idle timeout at Sat Sep 17 09:02:11 BRT 2016
+06:02:11.316 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Finishing executing command: Build{id=e043b8c6-858f-4551-bc56-419ba18d47db.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}
+06:02:11.320 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 146: received class org.gradle.launcher.daemon.protocol.CloseInput
+06:02:11.320 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] Received IO message from client: CloseInput[id=e043b8c6-858f-4551-bc56-419ba18d47db.2]
+06:02:11.321 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 146: received class org.gradle.launcher.daemon.protocol.Finished
+06:02:11.321 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] Received non-IO message from client: org.gradle.launcher.daemon.protocol.Finished@75dff377
+06:02:11.321 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received finished message: org.gradle.launcher.daemon.protocol.Finished@75dff377
+06:02:11.322 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 129: stopping connection
+06:02:11.322 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 146: received null
+06:02:11.322 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] Received end-of-input from client.
+06:02:11.323 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 129: stopping connection
+06:03:15.914 [DEBUG] [org.gradle.messaging.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:55318 to /127.0.0.1:55913.
+06:03:15.939 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 161: received class org.gradle.launcher.daemon.protocol.Build
+06:03:15.940 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] Received non-IO message from client: Build{id=7b948df4-f01e-4706-8cbe-f2de22e00dcd.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}
+06:03:15.940 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: Build{id=7b948df4-f01e-4706-8cbe-f2de22e00dcd.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}.
+06:03:15.940 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: Build{id=7b948df4-f01e-4706-8cbe-f2de22e00dcd.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap} with connection: socket connection from /127.0.0.1:55913 to /127.0.0.1:55318.
+06:03:15.941 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=7b948df4-f01e-4706-8cbe-f2de22e00dcd.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}, connection = org.gradle.launcher.daemon.server.DefaultDaemonConnection@445a1aee] after 1.0 minutes of idle
+06:03:15.941 [INFO] [org.gradle.launcher.daemon.server.DomainRegistryUpdater] Marking the daemon as busy, address: [5d54b1ea-6525-401e-b422-3ef5de75c6fd port:55913, addresses:[/0:0:0:0:0:0:0:1, /127.0.0.1]]
+06:03:15.941 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [5d54b1ea-6525-401e-b422-3ef5de75c6fd port:55913, addresses:[/0:0:0:0:0:0:0:1, /127.0.0.1]]
+06:03:15.941 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+06:03:15.942 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+06:03:15.944 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+06:03:15.944 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] updating lastActivityAt to 1474102995944
+06:03:15.944 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon is busy, sleeping until state changes.
+06:03:15.945 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=7b948df4-f01e-4706-8cbe-f2de22e00dcd.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}. Dispatching build started information...
+06:03:15.945 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 163: dispatching class org.gradle.launcher.daemon.protocol.BuildStarted
+06:03:15.946 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: {PATH=/Users/SuelenGC/.rvm/gems/ruby-2.2.2/bin:/Users/SuelenGC/.rvm/gems/ruby-2.2.2@global/bin:/Users/SuelenGC/.rvm/rubies/ruby-2.2.2/bin:/Users/SuelenGC/Library/Android/sdk/platform-tools/:/Users/SuelenGC/works/bin:/usr/local/share/npm/bin/:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/texbin:/Library/apache-ant-1.9.4/bin:/Users/SuelenGC/Documents/devtools/apache-maven-3.2.1/bin:GCC49/bin:/usr/local/go/bin:/Users/SuelenGC/.rvm/bin:/usr/local/var/postgres:/Users/SuelenGC/Library/Android/sdk/tools, IRBRC=/Users/SuelenGC/.rvm/rubies/ruby-2.2.2/.irbrc, GREP_OPTIONS=--color=auto, ANDROID_HOME=/Users/SuelenGC/Library/Android/sdk, LOGNAME=SuelenGC, rvm_version=1.26.11 (latest), PWD=/Users/SuelenGC/HelloWorldPhoneGap, TERM_PROGRAM_VERSION=343.7, APP_ICON_61289=/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/media/gradle.icns, SHELL=/usr/local/zsh, MY_RUBY_HOME=/Users/SuelenGC/.rvm/rubies/ruby-2.2.2, GOPATH=/Users/SuelenGC/works, GCC49=/usr/local/Cellar/gcc/4.9.2_1, OLDPWD=/Users/SuelenGC/HelloWorldPhoneGap/platforms/android, GEM_HOME=/Users/SuelenGC/.rvm/gems/ruby-2.2.2, PGDATA=/usr/local/var/postgres, rvm_path=/Users/SuelenGC/.rvm, TMPDIR=/var/folders/96/bw2v139104d8714hmd_dys8c0000gn/T/, RUBY_VERSION=ruby-2.2.2, XPC_FLAGS=0x0, TERM_SESSION_ID=724BD9CE-1E81-40C4-A8AA-E29AEB0E539B, _system_name=OSX, M2_HOME=/Users/SuelenGC/Documents/devtools/apache-maven-3.2.1, __CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0, Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.B85P8roz0i/Render, APP_NAME_61289=Gradle, SHLVL=1, USER_HOME=/Users/SuelenGC/, _system_arch=x86_64, rvm_bin_path=/Users/SuelenGC/.rvm/bin, GREP_COLOR=4;33, JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_11.jdk/Contents/Home, TERM=xterm-256color, rvm_prefix=/Users/SuelenGC, LANG=en_US.UTF-8, JAVA_MAIN_CLASS_61289=org.gradle.wrapper.GradleWrapperMain, ANT_HOME=/Library/Ant-1.9.3, GRADLE_USER_HOME=USER_HOME/.gradle, XPC_SERVICE_NAME=0, TERM_PROGRAM=Apple_Terminal, LSCOLORS=GxFxCxDxBxegedabagacad, _system_type=Darwin, _system_version=10.10, USER=SuelenGC, CLICOLOR=1, SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.aAZ8K0do3a/Listeners, EDITOR=vim, GEM_PATH=/Users/SuelenGC/.rvm/gems/ruby-2.2.2:/Users/SuelenGC/.rvm/gems/ruby-2.2.2@global, HOME=/Users/SuelenGC}
+06:03:15.947 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+06:03:15.947 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 60087). The daemon log file: /Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/daemon/2.2.1/daemon-60087.out.log
+06:03:15.948 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+06:03:15.948 [INFO] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=d1aa5b19-6de5-4d80-afcb-325e60e8ec25,javaHome=/Library/Java/JavaVirtualMachines/jdk1.8.0_11.jdk/Contents/Home,daemonRegistryDir=/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/daemon,pid=60087,idleTimeout=10800000,daemonOpts=-XX:MaxPermSize=256m,-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]
+06:03:15.955 [DEBUG] [org.gradle.internal.resource.transport.http.JavaSystemPropertiesHttpProxySettings] Found java system property 'http.nonProxyHosts': local|*.local|169.254/16|*.169.254/16. Will ignore proxy settings for these hosts.
+:preBuild UP-TO-DATE
+:preDebugBuild UP-TO-DATE
+:checkDebugManifest
+:CordovaLib:preBuild UP-TO-DATE
+:CordovaLib:preDebugBuild UP-TO-DATE
+:CordovaLib:compileDebugNdk UP-TO-DATE
+:CordovaLib:compileLint
+:CordovaLib:copyDebugLint UP-TO-DATE
+:CordovaLib:mergeDebugProguardFiles UP-TO-DATE
+:CordovaLib:packageDebugRenderscript UP-TO-DATE
+:CordovaLib:checkDebugManifest
+:CordovaLib:prepareDebugDependencies
+:CordovaLib:compileDebugRenderscript UP-TO-DATE
+:CordovaLib:generateDebugResValues UP-TO-DATE
+:CordovaLib:generateDebugResources UP-TO-DATE
+:CordovaLib:packageDebugResources UP-TO-DATE
+:CordovaLib:compileDebugAidl UP-TO-DATE
+:CordovaLib:generateDebugBuildConfig UP-TO-DATE
+:CordovaLib:generateDebugAssets UP-TO-DATE
+:CordovaLib:mergeDebugAssets UP-TO-DATE
+:CordovaLib:processDebugManifest UP-TO-DATE
+:CordovaLib:processDebugResources UP-TO-DATE
+:CordovaLib:generateDebugSources UP-TO-DATE
+:CordovaLib:compileDebugJavaWithJavac UP-TO-DATE
+:CordovaLib:processDebugJavaRes UP-TO-DATE
+:CordovaLib:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:CordovaLib:transformClassesAndResourcesWithSyncLibJarsForDebug UP-TO-DATE
+:CordovaLib:mergeDebugJniLibFolders UP-TO-DATE
+:CordovaLib:transformNative_libsWithMergeJniLibsForDebug UP-TO-DATE
+:CordovaLib:transformNative_libsWithSyncJniLibsForDebug UP-TO-DATE
+:CordovaLib:bundleDebug UP-TO-DATE
+:prepareAndroidCordovaLibUnspecifiedDebugLibrary UP-TO-DATE
+:prepareDebugDependencies
+:compileDebugAidl UP-TO-DATE
+:compileDebugRenderscript UP-TO-DATE
+:generateDebugBuildConfig UP-TO-DATE
+:generateDebugAssets UP-TO-DATE
+:mergeDebugAssets
+:generateDebugResValues UP-TO-DATE
+:generateDebugResources UP-TO-DATE
+:mergeDebugResources UP-TO-DATE
+:processDebugManifest UP-TO-DATE
+:processDebugResources
+:generateDebugSources
+:compileDebugJavaWithJavac UP-TO-DATE
+:compileDebugNdk UP-TO-DATE
+:compileDebugSources UP-TO-DATE
+:transformClassesWithDexForDebug UP-TO-DATE
+:mergeDebugJniLibFolders UP-TO-DATE
+:transformNative_libsWithMergeJniLibsForDebug UP-TO-DATE
+:processDebugJavaRes UP-TO-DATE
+:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:validateDebugSigning
+:packageDebug
+:zipalignDebug
+:assembleDebug
+:cdvBuildDebug
+
+BUILD SUCCESSFUL
+
+Total time: 3.492 secs
+06:03:18.622 [DEBUG] [org.gradle.api.internal.tasks.compile.daemon.CompilerDaemonManager] Stopping 0 compiler daemon(s).
+06:03:18.623 [INFO] [org.gradle.api.internal.tasks.compile.daemon.CompilerDaemonManager] Stopped 0 compiler daemon(s).
+06:03:18.623 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for settings file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/settings.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/settings_p3twwe4zw2nx1duybzr6lsjs/SettingsScript/buildscript).
+06:03:18.624 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for settings file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/settings.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/settings_p3twwe4zw2nx1duybzr6lsjs/SettingsScript/no_buildscript).
+06:03:18.625 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for build file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/build.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/build_d2gg9vqtu1wkl8apjd2nvm8zr/ProjectScript/buildscript).
+06:03:18.625 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for build file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/build.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/build_d2gg9vqtu1wkl8apjd2nvm8zr/ProjectScript/no_buildscript).
+06:03:18.626 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for script '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/CordovaLib/cordova.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/cordova_1ibchojqtalcl5stsaxw02s1i/DefaultScript/buildscript).
+06:03:18.626 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for script '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/CordovaLib/cordova.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/cordova_1ibchojqtalcl5stsaxw02s1i/DefaultScript/no_buildscript).
+06:03:18.626 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for build file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/CordovaLib/build.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/build_bo72d2940or76vyh5za4zsnp/ProjectScript/buildscript).
+06:03:18.627 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for build file '/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/CordovaLib/build.gradle' (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/scripts/build_bo72d2940or76vyh5za4zsnp/ProjectScript/no_buildscript).
+06:03:18.628 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache artifact-at-repository.bin (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/modules-2/metadata-2.14/artifact-at-repository.bin)
+06:03:18.628 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache module-metadata.bin (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/modules-2/metadata-2.14/module-metadata.bin)
+06:03:18.629 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on artifact cache (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/modules-2).
+06:03:18.629 [DEBUG] [org.gradle.cache.internal.DefaultCacheAccess] Cache Plugin Resolution Cache (/Users/SuelenGC/HelloWorldPhoneGap/USER_HOME/.gradle/caches/2.2.1/plugin-resolution) was closed 0 times.
+06:03:18.630 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache outputFileStates.bin (/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/.gradle/2.2.1/taskArtifacts/outputFileStates.bin)
+06:03:18.630 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache taskArtifacts.bin (/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin)
+06:03:18.631 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache fileSnapshots.bin (/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin)
+06:03:18.632 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache fileHashes.bin (/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/.gradle/2.2.1/taskArtifacts/fileHashes.bin)
+06:03:18.632 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on task history cache (/Users/SuelenGC/HelloWorldPhoneGap/platforms/android/.gradle/2.2.1/taskArtifacts).
+06:03:18.633 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.memcache.InMemoryCachedRepositoryFactory] In-memory dependency metadata cache closed. Repos cached: 14, cache instances: 3, modules served from cache: 53, artifacts: 53
+06:03:18.633 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.CachedStoreFactory] Resolution result cache closed. Cache reads: 0, disk reads: 4 (avg: 0.001 secs, total: 0.004 secs)
+06:03:18.634 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.CachedStoreFactory] Resolved configuration cache closed. Cache reads: 0, disk reads: 0 (avg: 0.0 secs, total: 0.0 secs)
+06:03:18.634 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.ResolutionResultsStoreFactory] Deleted 2 resolution results binary files in 0.001 secs
+06:03:18.634 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has finished executing the build.
+06:03:18.635 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon is busy, sleeping until state changes.
+06:03:18.636 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: finished waiting for DaemonCommandExecution[command = Build{id=7b948df4-f01e-4706-8cbe-f2de22e00dcd.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}, connection = org.gradle.launcher.daemon.server.DefaultDaemonConnection@445a1aee]. Result org.gradle.launcher.daemon.server.DaemonStateCoordinator@398f0093 with state Running
+06:03:18.636 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: completed DaemonCommandExecution[command = Build{id=7b948df4-f01e-4706-8cbe-f2de22e00dcd.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}, connection = org.gradle.launcher.daemon.server.DefaultDaemonConnection@445a1aee]
+06:03:18.636 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] updating lastActivityAt to 1474102998636
+06:03:18.636 [INFO] [org.gradle.launcher.daemon.server.DomainRegistryUpdater] Marking the daemon as idle, address: [5d54b1ea-6525-401e-b422-3ef5de75c6fd port:55913, addresses:[/0:0:0:0:0:0:0:1, /127.0.0.1]]
+06:03:18.636 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking idle by address: [5d54b1ea-6525-401e-b422-3ef5de75c6fd port:55913, addresses:[/0:0:0:0:0:0:0:1, /127.0.0.1]]
+06:03:18.637 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+06:03:18.637 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+06:03:18.639 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+06:03:18.640 [DEBUG] [org.gradle.launcher.daemon.server.exec.ReturnResult] Daemon is dispatching the build result: DaemonCommandResult[type=Success, value=null]
+06:03:18.640 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon is idle, sleeping until state change or idle timeout at Sat Sep 17 09:03:18 BRT 2016
+06:03:18.640 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 160: dispatching class org.gradle.launcher.daemon.protocol.Success
+06:03:18.642 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Finishing executing command: Build{id=7b948df4-f01e-4706-8cbe-f2de22e00dcd.1, currentDir=/Users/SuelenGC/HelloWorldPhoneGap}
+06:03:18.646 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 161: received class org.gradle.launcher.daemon.protocol.CloseInput
+06:03:18.647 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] Received IO message from client: CloseInput[id=7b948df4-f01e-4706-8cbe-f2de22e00dcd.2]
+06:03:18.648 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 161: received class org.gradle.launcher.daemon.protocol.Finished
+06:03:18.648 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] Received non-IO message from client: org.gradle.launcher.daemon.protocol.Finished@44e084d
+06:03:18.648 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received finished message: org.gradle.launcher.daemon.protocol.Finished@44e084d
+06:03:18.648 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 160: stopping connection
+06:03:18.649 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 161: received null
+06:03:18.649 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] Received end-of-input from client.
+06:03:18.649 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 160: stopping connection

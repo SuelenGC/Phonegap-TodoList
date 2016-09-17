@@ -11,10 +11,22 @@ h1 {
     line-height: 2em;
 }
 
-#newTaskInput, #addNewTask {
+#newTaskInput {
     display: block;
     width: 98%;
     background-color: #757769;
+    border: 0;
+    height: 2em;
+    font-size: 1em;
+    color: #f5f6f5;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#addNewTask {
+    display: block;
+    width: 98%;
     border: 0;
     height: 2em;
     font-size: 1em;
