@@ -30,7 +30,7 @@ $( document ).ready(function(){
     $('#addNewTask').on('click', function() {
         var key = Date.now();
         // $newTaskInput.val('Teste ' + Date.now());
-        var newTask = '<li data-key="' + key + '"><span>' + $newTaskInput.val() + '</span></li>';
+        var newTask = '<li data-key="' + $newTaskInput.val() + '"><span>' + $newTaskInput.val() + '</span></li>';
         $taskList.append(newTask);
 
         //persist
@@ -53,21 +53,22 @@ $( document ).ready(function(){
         taskTouchEnd = $(end).attr('data-key');
         taskTouchEndX = e.originalEvent.touches[0].pageX;
         
-        if (taskTouchStartX < taskTouchEndX) {
-            //to right done
-            if (taskTouchStart == taskTouchEnd) {
-                $(end).toggleClass('done');
-            }    
-        } else {
-            //to left delete
-            if (taskTouchStart == taskTouchEnd) {
-                taskList = $.grep(taskList, function(e){ return e.key != taskTouchEnd;})
-                if(window.localStorage) {
-                    window.localStorage.setItem('taskList', JSON.stringify(taskList));
-                }
-        
-                $(end).remove();
-            }
-        }
+        if (taskTouchStart == taskTouchEnd) {
+
+	        if (taskTouchStartX < taskTouchEndX) {
+	            //to right done
+	            $(end).toggleClass('done');
+	        } 
+	        else 
+	        {
+	            //to left delete
+	            taskList = $.grep(taskList, function(e){ return e.key != taskTouchEnd;})
+	            if(window.localStorage) {
+	                window.localStorage.setItem('taskList', JSON.stringify(taskList));
+	            }
+	    
+	            $(end).hide("slow", function(){ $(this).remove(); });
+	        }
+	    }
     });
 });
