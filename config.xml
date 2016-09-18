@@ -3,8 +3,9 @@
     <name>HelloWorldPhoneGap</name>
     <description>App for Todo List.</description>
     <author email="suelengcarvalho@gmail.com" href="suelengc.com">Suelen G. Carvalho</author>
-	
-	<preference name="Orientation" value="portrait"/>
-	<preference name="DisallowOverscroll" value="true"/>
-	<preference name="BackgroundColor" value="0xf2f2f2"/>
+    <preference name="Orientation" value="portrait" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="BackgroundColor" value="0xf2f2f2" />
+    <plugin name="cordova-plugin-dialogs" spec="~1.3.0" />
+    <plugin name="cordova-plugin-geolocation" spec="~2.3.0" />
 </widget>
