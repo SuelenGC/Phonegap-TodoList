@@ -3,6 +3,13 @@
     <name>HelloWorldPhoneGap</name>
     <description>App for Todo List.</description>
     <author email="suelengcarvalho@gmail.com" href="suelengc.com">Suelen G. Carvalho</author>
+    <!-- <content src="camera.html" /> -->
+    
+    <platform name="android">
+        <preference name="SplashScreen" value="none" />
+    </platform>
+    
+	
     <preference name="Orientation" value="portrait" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="BackgroundColor" value="0xf2f2f2" />

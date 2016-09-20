@@ -15,6 +15,12 @@
         },
         "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.suelengc.phonegap"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.suelengc.phonegap"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.suelengc.phonegap"
         }
     },
     "dependent_plugins": {

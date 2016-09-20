@@ -1,71 +1,107 @@
-var taskList = new Array();
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
 
-$( document ).ready(function(){
+	var taskList = new Array();
 
-    var $newTaskInput = $('#newTaskInput');
-    var $taskList = $('#taskList');
+	$( document ).ready(function(){
 
-    var taskTouchStart;
-    var taskTouchEnd;
-    var taskTouchStartX;
-    var taskTouchEndX;
+	    $(".button-collapse").sideNav();
+	    
+	    var $newTaskInput = $('#newTaskInput');
+	    var $taskList = $('#taskList');
 
-    if (window.localStorage){
-        taskList = JSON.parse(window.localStorage.getItem('taskList'));
-    }
+	    var taskTouchStart;
+	    var taskTouchEnd;
+	    var taskTouchStartX;
+	    var taskTouchEndX;
+        
+	    if (window.localStorage){
+	        taskList = JSON.parse(window.localStorage.getItem('taskList'));
+	    }
 
-    if (null !== taskList){
-        for(i=0; i<taskList.length; i++){
-            var newTask = '<li data-key="' + taskList[i].key + '"><span>' + taskList[i].task + '</span></li>';
+	    if (null !== taskList){
+	        for(i=0; i<taskList.length; i++){
+	            var newTask = '<li class="card darken-1" data-key="' + taskList[i].key + '"><span>' + taskList[i].task + 
+                    '</br>latitude: ' + taskList[i].latitude + 
+                    '</br>longitude: ' + taskList[i].longitude + 
+                    '</span></li>';
+	            $taskList.append(newTask);
+	        }
+	    }
+	    else
+	    {
+	        taskList = new Array();
+	    }
+
+		var onSuccess = function(position) {
+		    var lat = position.coords.latitude;
+            var lng = position.coords.longitude;
+
+            var key = Date.now();
+            var newTask = '<li class="card darken-1" data-key="' + key + '"><span>' + $newTaskInput.val() + 
+                    '</br>latitude: ' + lat + 
+                    '</br>longitude: ' + lng + 
+                    '</span></li>';
+
             $taskList.append(newTask);
-        }
-    }
-    else
-    {
-        taskList = new Array();
-    }
 
-    $('#addNewTask').on('click', function() {
-        var key = Date.now();
-        $newTaskInput.val('Teste ' + Date.now());
-        var newTask = '<li data-key="' + key + '"><span>' + $newTaskInput.val() + '</span></li>';
-        $taskList.append(newTask);
+            //persist localStorage
+            taskList.push({key:key, 
+                        task:$newTaskInput.val(), 
+                        done:false,
+                        latitude: lat,
+                        longitude: lng
+                    });
 
-        //persist
-        taskList.push({key:key, task:$newTaskInput.val(), done:false});
-        if(window.localStorage) {
-            window.localStorage.setItem('taskList', JSON.stringify(taskList));
-        }
-
-        $newTaskInput.val('');
-    });
-
-    $taskList.on('touchstart', 'li', function(e){
-        var start = e.target;
-        taskTouchStart = $(start).attr('data-key');
-        taskTouchStartX = e.originalEvent.touches[0].pageX;
-    });
-
-    $taskList.on('touchmove', 'li', function(e){
-        var end = e.target;
-        taskTouchEnd = $(end).attr('data-key');
-        taskTouchEndX = e.originalEvent.touches[0].pageX;
-        
-        if (taskTouchStartX < taskTouchEndX) {
-            //to right done
-            if (taskTouchStart == taskTouchEnd) {
-                $(end).toggleClass('done');
-            }    
-        } else {
-            //to left delete
-            if (taskTouchStart == taskTouchEnd) {
-                taskList = $.grep(taskList, function(e){ return e.key != taskTouchEnd;})
-                if(window.localStorage) {
-                    window.localStorage.setItem('taskList', JSON.stringify(taskList));
-                }
-        
-                $(end).remove();
+            if(window.localStorage) {
+                window.localStorage.setItem('taskList', JSON.stringify(taskList));
             }
-        }
-    });
-});
+
+            $newTaskInput.val('');
+		};
+
+		function onError(error) {
+		    alert('code: '    + error.code    + '\n' +
+		          'message: ' + error.message + '\n');
+		}
+
+		$('#addNewTask').on('click', function() {
+	        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+	    });
+
+	    $taskList.on('touchstart', 'li', function(e){
+	        var start = e.target;
+	        taskTouchStart = $(start).attr('data-key');
+	        taskTouchStartX = e.originalEvent.touches[0].pageX;
+	    });
+
+	    $taskList.on('touchmove', 'li', function(e){
+	        var end = e.target;
+	        taskTouchEnd = $(end).attr('data-key');
+	        taskTouchEndX = e.originalEvent.touches[0].pageX;
+	        
+	        if (taskTouchStart == taskTouchEnd) {
+
+		        if (taskTouchStartX < taskTouchEndX) {
+		            //to right done
+		            $(end).toggleClass('done');
+		        } 
+		        else 
+		        {
+		            //to left delete
+		            taskList = $.grep(taskList, function(e){ return e.key != taskTouchEnd;})
+		            if(window.localStorage) {
+		                window.localStorage.setItem('taskList', JSON.stringify(taskList));
+		            }
+		    
+		            $(end).hide("slow", function(){ $(this).remove(); });
+		        }
+		    }
+	    });
+	});
+
+	//teste notification
+    //navigator.notification.alert('teste', null, 'Game Over', 'Done')
+
+
+}

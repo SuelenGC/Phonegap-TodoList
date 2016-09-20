@@ -18,6 +18,14 @@
         },
         "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.suelengc.phonegap"
+        },
+        "cordova-plugin-camera": {
+            "CAMERA_USAGE_DESCRIPTION": " ",
+            "PHOTOLIBRARY_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "com.suelengc.phonegap"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.suelengc.phonegap"
         }
     },
     "dependent_plugins": {
