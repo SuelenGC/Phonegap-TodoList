@@ -30,6 +30,7 @@
         },
         "is_top_level": false,
         "variables": {}
+<<<<<<< HEAD
     },
     "cordova-plugin-camera": {
         "source": {
@@ -54,5 +55,7 @@
         },
         "is_top_level": true,
         "variables": {}
+=======
+>>>>>>> 7ad873e0ba3091ca6974b79a0f00f4d51b27562e
     }
 }

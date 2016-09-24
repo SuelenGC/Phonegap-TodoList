@@ -14,7 +14,7 @@ function onDeviceReady() {
 	    var taskTouchEnd;
 	    var taskTouchStartX;
 	    var taskTouchEndX;
-        
+
 	    if (window.localStorage){
 	        taskList = JSON.parse(window.localStorage.getItem('taskList'));
 	    }
@@ -25,6 +25,7 @@ function onDeviceReady() {
                     '</br>latitude: ' + taskList[i].latitude + 
                     '</br>longitude: ' + taskList[i].longitude + 
                     '</span></li>';
+
 	            $taskList.append(newTask);
 	        }
 	    }
@@ -32,6 +33,7 @@ function onDeviceReady() {
 	    {
 	        taskList = new Array();
 	    }
+
 
 		var onSuccess = function(position) {
 		    var lat = position.coords.latitude;
@@ -102,6 +104,4 @@ function onDeviceReady() {
 
 	//teste notification
     //navigator.notification.alert('teste', null, 'Game Over', 'Done')
-
-
 }
