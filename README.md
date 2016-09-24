@@ -1,10 +1,18 @@
-**Todo List**
+# Mobile App Cordova Todo List
 
-Projeto de aplicativo Todo List cross-híbrido desenvolvido com Cordova. São utilizados plugins de geolocation, notificação, splashscreen e camera.
+To Do List cross-hybrid mobile application project developed with Cordova.
+The following plugins are used: 
+- [cordova-plugin-geolocation](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-geolocation/)
+- [cordova-plugin-notification](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-notification)
+- [cordova-plugin-splashscreen](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-splashscreen/)
+- [cordova-plugin-camera](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-camera/)
 
-Para rodar o projeto:
+To run the project:
 
-    - É preciso ter instalado o NodeJS e npm.
-    - É preciso ter instalado o cordova (`npm install -g cordova`).
-    - Dentro do diretório raiz do projeto (mesmo diretório que consta o arquivo config.xml) basta rodar o projeto com `cordova run browser`.
-    - Caso tenha o ambiente do Android ou iOS instalados é possível rodar nos respectivos emulador/simulador com `cordova run android` ou `cordova run io`.
+* You must have installed [Node.JS](https://nodejs.org/en) and [npm](https://www.npmjs.com).
+* You must have installed [cordova](https://cordova.apache.org/). You can do that through the command `npm install -g cordova`.
+* Within the project root directory (the same directory as shown config.xml)
+    * To run in browser: `cordova run browser`.
+* If you have the Android or iOS environment installed can run on their emulator / simulator: 
+    * Android: `cordova run android` 
+    * iOS: `cordova run io`.
