@@ -3,7 +3,7 @@
     <name>HelloWorldPhoneGap</name>
     <description>App for Todo List.</description>
     <author email="suelengcarvalho@gmail.com" href="suelengc.com">Suelen G. Carvalho</author>
-    <!-- <content src="camera.html" /> -->
+<!--     <content src="camera.html" /> -->
     
     <platform name="android">
         <preference name="SplashScreen" value="none" />

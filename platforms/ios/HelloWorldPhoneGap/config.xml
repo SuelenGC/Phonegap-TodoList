@@ -35,6 +35,7 @@
     <name>HelloWorldPhoneGap</name>
     <description>App for Todo List.</description>
     <author email="suelengcarvalho@gmail.com" href="suelengc.com">Suelen G. Carvalho</author>
+    <content src="camera.html" />
     <preference name="AllowInlineMediaPlayback" value="false" />
     <preference name="BackupWebStorage" value="cloud" />
     <preference name="DisallowOverscroll" value="true" />

@@ -9,8 +9,8 @@ function onDeviceReady() {
 }
 
 function onPhotoDataSuccess(imageData) {
-  var image = document.getElementById('image');
-  alert(imageURI);
+  var image = $('#image');
+  console.log(imageData);
 
   image.src = imageData;
 }

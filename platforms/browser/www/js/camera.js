@@ -1,45 +1,42 @@
-var pictureSource;   // picture source
-var destinationType; // sets the format of returned value
-
-document.addEventListener("deviceready",onDeviceReady,false);
+document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-    pictureSource = navigator.camera.PictureSourceType;
-    destinationType = navigator.camera.DestinationType;
-}
 
-function onPhotoDataSuccess(imageData) {
-  var image = document.getElementById('image');
-  alert(imageURI);
+	function onSuccessUri(imageUri) {
+		console.log(imageUri);
 
-  image.src = imageData;
-}
+		$('#image').attr('src', imageUri);
+	}
 
-function onPhotoURISuccess(imageURI) {
-  alert(imageURI);
+	$('#galeria').on('click', function() {
+		navigator.camera.getPicture(onSuccessUri, onFail, 
+	    { 
+	      quality: 50,
+	      destinationType: navigator.camera.DestinationType.FILE_URI,
+	      sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
+	    });
 
-  var image = document.getElementById('image');
+	})
 
-  image.src = imageURI;
-}
+	// Abrir Camera
+	function onFail(message) {
+		alert(message);
+	}
 
-function capturePhoto() {
-  navigator.camera.getPicture(onPhotoDataSuccess, onFail, 
-    { 
-      quality: 50,
-      destinationType: destinationType.DATA_URL 
-    });
-}
+	function onSuccessData(imageData) {
+		console.log(imageData);
 
-function getPhoto() {
-  navigator.camera.getPicture(onPhotoURISuccess, onFail, 
-    { 
-      quality: 50,
-      destinationType: destinationType.FILE_URI,
-      sourceType: pictureSource.PHOTOLIBRARY
-    });
-}
+		$('#image').attr('src', imageData);
+	}
 
-function onFail(message) {
-  alert('Failed because: ' + message);
+	$('#tirarFoto').on('click', function() {
+		navigator.camera.getPicture(
+			onSuccessData, 
+			onFail,
+			{
+				quality: 50,
+				destinationType: navigator.camera.DestinationType.DATA_URL
+			});
+	})
+	// fim abrir camera
 }
